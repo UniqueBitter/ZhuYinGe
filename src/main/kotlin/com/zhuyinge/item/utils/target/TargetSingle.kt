@@ -1,6 +1,6 @@
 package top.maplex.rayskillsystem.skill.tools.target
 
-import com.dew.item.utils.target.getEntity
+import com.zhuyinge.item.utils.target.getEntity
 import org.bukkit.entity.LivingEntity
 import taboolib.module.effect.ParticleSpawner
 import taboolib.module.effect.shape.Ray

@@ -1,4 +1,4 @@
-package com.dew.item.job.player
+package com.zhuyinge.item.job.player
 
 import org.bukkit.entity.Player
 import top.maplex.panlingitem.api.PanLingAPI

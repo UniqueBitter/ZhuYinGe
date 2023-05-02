@@ -1,4 +1,4 @@
-package com.dew.item.others
+package com.zhuyinge.item.others
 
 import org.bukkit.event.player.PlayerInteractEvent
 import taboolib.common.platform.event.SubscribeEvent

@@ -1,4 +1,4 @@
-package com.dew.item.utils
+package com.zhuyinge.item.utils
 
 import org.bukkit.Material
 import org.bukkit.inventory.ItemStack

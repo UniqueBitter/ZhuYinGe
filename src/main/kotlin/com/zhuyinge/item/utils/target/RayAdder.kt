@@ -1,4 +1,4 @@
-package com.dew.item.utils.target
+package com.zhuyinge.item.utils.target
 
 import org.bukkit.Material
 import org.bukkit.entity.LivingEntity

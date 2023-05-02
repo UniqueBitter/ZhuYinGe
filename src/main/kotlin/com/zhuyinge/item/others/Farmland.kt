@@ -1,9 +1,6 @@
-package com.dew.item.others
+package com.zhuyinge.item.others
 
-import org.bukkit.Material
 import org.bukkit.event.player.PlayerInteractEvent
-import org.bukkit.inventory.Inventory
-import org.bukkit.inventory.ItemStack
 import taboolib.common.platform.event.SubscribeEvent
 
 object Farmland {

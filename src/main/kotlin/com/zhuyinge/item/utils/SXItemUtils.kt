@@ -1,4 +1,4 @@
-package com.dew.item.utils
+package com.zhuyinge.item.utils
 
 import github.saukiya.sxitem.SXItem
 import org.bukkit.Material

@@ -1,4 +1,4 @@
-package com.dew.item.job.player
+package com.zhuyinge.item.job.player
 
 enum class JobType(val display: String) {
 

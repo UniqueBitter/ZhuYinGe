@@ -1,15 +1,11 @@
-package com.dew.item.utils
+package com.zhuyinge.item.utils
 
 import org.bukkit.Bukkit
 import org.bukkit.Sound
 import org.bukkit.command.CommandSender
 import org.bukkit.entity.Player
-import org.bukkit.inventory.ItemStack
 import taboolib.common5.Baffle
 import taboolib.module.chat.colored
-import taboolib.module.ui.ClickEvent
-import taboolib.module.ui.type.Basic
-import taboolib.platform.util.buildItem
 
 /**
  * LoggerUtils
@@ -20,7 +16,7 @@ import taboolib.platform.util.buildItem
 
 fun String.forAll() {
     Bukkit.getOnlinePlayers().forEach { sender ->
-        sender.sendMessage("§8[§a 朝露 §8] §7${this.colored()}")
+        sender.sendMessage("§8[§a 朱音阁 §8] §7${this.colored()}")
     }
 }
 
@@ -80,7 +76,7 @@ fun debug(vararg block: String) {
  * 发送信息
  */
 fun toInfo(sender: CommandSender, message: String) {
-    sender.sendMessage("§8[§a 朝露 §8] §7${message.replace("&", "§")}")
+    sender.sendMessage("§8[§a 朱音阁 §8] §7${message.replace("&", "§")}")
     if (sender is Player && !cooldown.hasNext(sender.name)) {
         sender.playSound(sender.location, Sound.UI_BUTTON_CLICK, 1f, (1..2).random().toFloat())
     }
@@ -90,7 +86,7 @@ fun toInfo(sender: CommandSender, message: String) {
  * 发送信息
  */
 fun toError(sender: CommandSender, message: String) {
-    sender.sendMessage("§8[§4 朝露 §8] §7${message.replace("&", "§")}")
+    sender.sendMessage("§8[§4 朱音阁 §8] §7${message.replace("&", "§")}")
     if (sender is Player && !cooldown.hasNext(sender.name)) {
         sender.playSound(sender.location, Sound.ENTITY_VILLAGER_NO, 1f, (1..2).random().toFloat())
     }
@@ -100,7 +96,7 @@ fun toError(sender: CommandSender, message: String) {
  * 发送信息
  */
 fun toDone(sender: CommandSender, message: String) {
-    sender.sendMessage("§8[§6 朝露 §8] §7${message.replace("&", "§")}")
+    sender.sendMessage("§8[§6 朱音阁 §8] §7${message.replace("&", "§")}")
     if (sender is Player && !cooldown.hasNext(sender.name)) {
         sender.playSound(sender.location, Sound.ENTITY_EXPERIENCE_ORB_PICKUP, 1f, (1..2).random().toFloat())
     }
@@ -110,7 +106,7 @@ fun toDone(sender: CommandSender, message: String) {
  * 发送信息到后台
  */
 fun toConsole(message: String) {
-    Bukkit.getConsoleSender().sendMessage("§8[§e 朝露 §8] §7${message.replace("&", "§")}")
+    Bukkit.getConsoleSender().sendMessage("§8[§e 朱音阁 §8] §7${message.replace("&", "§")}")
 }
 
 /**

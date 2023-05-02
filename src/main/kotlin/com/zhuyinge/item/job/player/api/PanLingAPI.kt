@@ -2,7 +2,6 @@ package top.maplex.panlingitem.api
 
 import org.bukkit.Bukkit
 import org.bukkit.entity.Player
-import taboolib.common.platform.command.player
 
 object PanLingAPI {
 
