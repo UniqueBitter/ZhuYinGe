@@ -1,0 +1,6 @@
+# 黑名单列表
+blacklist:
+  - id: "panling:goldkey"
+    material: "YELLOW_DYE"
+  - id: "panling:goldkey2"
+    material: "YELLOW_DYE"
