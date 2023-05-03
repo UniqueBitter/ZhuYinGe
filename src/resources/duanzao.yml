@@ -1,0 +1,9 @@
+duanzao:
+  example_recipe:
+    conditions:
+      A: DIAMOND
+      B: IRON_INGOT
+      C: GOLD_INGOT
+    result:
+      item: DIAMOND_SWORD
+      amount: 1

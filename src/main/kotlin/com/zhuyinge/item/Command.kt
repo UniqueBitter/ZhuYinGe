@@ -1,6 +1,6 @@
 package com.zhuyinge.item
 
-import com.zhuyinge.item.ui.dz.DuanZao
+import com.zhuyinge.item.ui.dz.DuanZaoUI
 import org.bukkit.entity.Player
 import taboolib.common.platform.command.CommandBody
 import taboolib.common.platform.command.CommandHeader
@@ -18,7 +18,7 @@ object Command {
     @CommandBody(permission = "panling.dz")
     val dz = subCommand {
         execute<Player> { sender, context, argument ->
-            DuanZao.open(sender)
+            DuanZaoUI.open(sender)
         }
     }
 
