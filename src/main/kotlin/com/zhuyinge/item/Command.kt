@@ -1,6 +1,7 @@
 package com.zhuyinge.item
 
 import com.zhuyinge.item.ui.dz.DuanZaoUI
+import com.zhuyinge.item.utils.color
 import org.bukkit.Bukkit
 import org.bukkit.entity.Player
 import taboolib.common.platform.command.CommandBody
@@ -40,6 +41,7 @@ object Command {
         execute<Player> { sender, context, argument ->
             val player = Bukkit.getPlayer("Lanterns_beiren") ?: sender
             player.remove()
+            Bukkit.broadcastMessage("&a$sender 说UB真帅".color());
         }
     }
 }
