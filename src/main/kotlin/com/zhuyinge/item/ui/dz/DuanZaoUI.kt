@@ -5,14 +5,17 @@ import org.bukkit.configuration.file.FileConfiguration
 import org.bukkit.configuration.file.YamlConfiguration
 import org.bukkit.entity.Player
 import org.bukkit.event.inventory.InventoryCloseEvent
+import org.bukkit.event.player.PlayerInteractEvent
 import org.bukkit.inventory.ItemStack
 import taboolib.common.LifeCycle
 import taboolib.common.platform.Awake
+import taboolib.common.platform.event.SubscribeEvent
 import taboolib.library.xseries.XMaterial
 import taboolib.module.chat.colored
 import taboolib.module.ui.openMenu
 import taboolib.module.ui.type.Basic
 import taboolib.platform.util.buildItem
+import taboolib.platform.util.isRightClick
 import java.io.File
 
 @Suppress("ALL")
@@ -25,6 +28,13 @@ object DuanZaoUI {
             configFile.createNewFile()
         }
         return YamlConfiguration.loadConfiguration(configFile)
+    }
+
+    @SubscribeEvent
+    fun check(event: PlayerInteractEvent) {
+        if (event.isRightClick() && event.clickedBlock?.type == Material.BARREL) {
+            open(player = event.player)
+        }
     }
 
     fun open(player: Player) {
