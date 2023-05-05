@@ -19,18 +19,10 @@ object UIManagar {
             if (event.clickedInventory != null && event.clickedInventory?.holder is Barrel) {
                 for (slot in 0..26) {
                     if (slot !in excludedSlots && event.slot == slot) {
-                        inventory.setItem(26, buildItem(XMaterial.BREWING_STAND) {
-                            name = "§e§l快速教程"
-                            lore.add("§7§o第一行放§2§l装备雏形§b§l/§d§l升级材料")
-                            lore.add("§7§o第二行第一个格子放§7§l升阶装备§b§l/§c§l传说手稿")
-                            lore.add("§7§o第二行第二个格子放§4§l武器核心§b§l/§9§l防具核心")
-                            lore.add("§7§o第二行第三个格子放§a§l元素")
-                            lore.add("§7§o第二行最后放§e§l区域材料A,B")
-                        })
                         val pattern = arrayOf(
                             "A########",
                             "#B#C#D#EF",
-                            "########*"
+                            "#######L*"
                         )
                         for (row in pattern.indices) {
                             for (col in pattern[row].indices) {
@@ -39,12 +31,22 @@ object UIManagar {
                                         name = "§f§l我是墙"
                                     })
                                 }
+                                if (pattern[row][col] == '*') {
+                                    inventory.setItem(row * 9 + col, buildItem(XMaterial.BREWING_STAND) {
+                                        name = "§e§l快速教程"
+                                        lore.add("§7§o第一行放§2§l装备雏形§b§l/§d§l升级材料")
+                                        lore.add("§7§o第二行第一个格子放§7§l升阶装备§b§l/§c§l传说手稿")
+                                        lore.add("§7§o第二行第二个格子放§4§l武器核心§b§l/§9§l防具核心")
+                                        lore.add("§7§o第二行第三个格子放§a§l元素")
+                                        lore.add("§7§o第二行最后放§e§l区域材料A,B")
+                                    })
+                                }
                             }
-                        }
-                        if (slot == 26) {
-                            event.isCancelled = true
-                        } else {
-                            event.isCancelled = true
+                            if (slot == 26) {
+                                event.isCancelled = true
+                            } else {
+                                event.isCancelled = true
+                            }
                         }
                     }
                 }
