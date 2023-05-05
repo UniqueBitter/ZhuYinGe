@@ -57,5 +57,8 @@ object Command {
             }
         }
     }
+
+    @CommandBody(permission = "")
+    val give = subCommand { }
 }
 

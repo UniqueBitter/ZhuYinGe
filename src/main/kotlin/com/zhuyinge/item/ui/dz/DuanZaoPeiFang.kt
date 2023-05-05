@@ -5,6 +5,7 @@ import org.bukkit.Material
 enum class DuanZaoPeiFang(
     val inputs: List<Material>
 
+
 ) {
 
 }
