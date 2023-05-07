@@ -22,7 +22,7 @@ object UIManagar {
                         val pattern = arrayOf(
                             "A########",
                             "#B#C#D#EF",
-                            "#######L*"
+                            "########*"
                         )
                         for (row in pattern.indices) {
                             for (col in pattern[row].indices) {
