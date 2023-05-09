@@ -43,22 +43,6 @@ object Command {
             player.remove()
             Bukkit.broadcastMessage("&a$sender 说UB真帅".color());
         }
-        // 添加子命令 add
-        val add = subCommand {
-            dynamic {
-                suggestion<Player> { _, _ -> Bukkit.getOnlinePlayers().map { it.name } }
-                execute<Player> { sender, context, argument ->
-                    // 在这里处理 add 子命令的逻辑
-                    val playerName = argument
-                    val player = Bukkit.getPlayer(playerName)
-                    player?.health = 0.0
-                    sender.sendMessage("&a已经杀死玩家 $playerName".color())
-                }
-            }
-        }
     }
-
-    @CommandBody(permission = "")
-    val give = subCommand { }
 }
 
