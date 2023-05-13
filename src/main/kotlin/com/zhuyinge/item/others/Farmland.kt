@@ -1,5 +1,7 @@
 package com.zhuyinge.item.others
 
+import com.zhuyinge.item.utils.error
+import com.zhuyinge.item.utils.forAll
 import org.bukkit.event.player.PlayerInteractEvent
 import taboolib.common.platform.event.SubscribeEvent
 
@@ -13,6 +15,9 @@ object Farmland {
                     return
                 }
                 event.isCancelled = true
+                player.error("不要破坏粮食哦=-=")
+                player.remove()
+                ("${player.name}意图踩踏农田，人皇震怒。当场赐死。").forAll()
             }
         }
     }

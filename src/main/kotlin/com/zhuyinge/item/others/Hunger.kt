@@ -29,7 +29,6 @@ object Hunger {
         }
         val player = event.player
 
-
         val fishCount = fish.getOrDefault(player.uniqueId, 0)
         if (player.isOp) {
             return

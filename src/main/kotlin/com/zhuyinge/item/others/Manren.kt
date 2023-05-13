@@ -29,6 +29,7 @@ object Manren {
         if (onlinePlayers >= maxPlayer - 3) {
             player.kickPlayer("${ChatColor.RED}你没有剩余空位的资格，抱歉")
         }
+
     }
 
     @SubscribeEvent

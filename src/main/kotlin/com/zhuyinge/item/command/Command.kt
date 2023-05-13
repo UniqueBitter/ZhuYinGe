@@ -1,4 +1,4 @@
-package com.zhuyinge.item
+package com.zhuyinge.item.command
 
 import com.zhuyinge.item.ui.dz.DuanZaoUI
 import com.zhuyinge.item.utils.color
@@ -27,7 +27,7 @@ object Command {
         }
     }
 
-    @CommandBody(permission = "panling.admin")
+    @CommandBody(permission = "·panling.admin")
     val dzbox = subCommand {
         execute<Player> { sender, context, argument ->
             sender.inventory.addItem(buildItem(XMaterial.BARREL) {
