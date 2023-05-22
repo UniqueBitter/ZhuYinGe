@@ -16,7 +16,7 @@ object Farmland {
                 }
                 event.isCancelled = true
                 player.error("不要破坏粮食哦=-=")
-                player.remove()
+                player.damage(player.health)
                 ("${player.name}意图踩踏农田，人皇震怒。当场赐死。").forAll()
             }
         }
