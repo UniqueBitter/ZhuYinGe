@@ -10,14 +10,14 @@ object Farmland {
     fun onInt(event: PlayerInteractEvent) {
         val player = event.player
         val block = event.clickedBlock ?: return
-            if (block.type == org.bukkit.Material.FARMLAND) {
-                if (player.isOp) {
-                    return
-                }
-                event.isCancelled = true
-                player.error("不要破坏粮食哦=-=")
-                player.damage(player.health)
-                ("${player.name}意图踩踏农田，人皇震怒。当场赐死。").forAll()
+        if (block.type == org.bukkit.Material.FARMLAND) {
+            if (player.isOp) {
+                return
             }
+            event.isCancelled = true
+            player.error("不要破坏粮食哦=-=")
+            player.addScoreboardTag("fanren")
+            ("${player.name}意图踩踏农田，人皇震怒。被打入水牢").forAll()
         }
     }
+}
